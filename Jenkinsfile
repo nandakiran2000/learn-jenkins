@@ -5,7 +5,7 @@ pipeline {
         }
     }  // Runs on any available agent
     envinorment{
-        greeting="hello jenkins"
+        greeting= "hello jenkins"
     }
     stages {
         stage('Build') {
@@ -23,8 +23,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh"""
-                echo 'here i wrote the shell script'
-                env
+                    echo 'here i wrote the shell script'
+                    env
                 """
             }
         }
