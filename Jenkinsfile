@@ -4,7 +4,7 @@ pipeline {
             label "agent-1"
         }
     }  // Runs on any available agent
-    envirnoment{
+    environment{
         greeting= "hello jenkins"
     }
     stages {
