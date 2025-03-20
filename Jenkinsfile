@@ -4,7 +4,9 @@ pipeline {
             label "agent-1"
         }
     }  // Runs on any available agent
-
+    envinorment{
+        greeting="hello jenkins"
+    }
     stages {
         stage('Build') {
             steps {
@@ -20,7 +22,10 @@ pipeline {
 
         stage('Deploy') {
             steps {
+                sh"""
                 echo 'Deploying the application...'
+                env
+                """
             }
         }
     }
