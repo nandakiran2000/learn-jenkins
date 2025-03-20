@@ -24,4 +24,18 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            echo "Step 1: Running post-build step for SUCCESS..."
+            // Add your success-related commands here
+        }
+        failure {
+            echo "Step 2: Running post-build step for FAILURE..."
+            // Add your failure-related commands here
+        }
+        always {
+            echo "Step 3: Running post-build step that always runs..."
+            // Add commands that should always run (cleanup, notifications, etc.)
+        }
+    }
 }
