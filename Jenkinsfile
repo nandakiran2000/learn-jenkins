@@ -44,7 +44,7 @@ pipeline {
                 """
             }
         }
-        stage('params')
+        stage('params'){
             steps {
                 sh """
                     echo "Hello ${params.PERSON}"
@@ -58,6 +58,7 @@ pipeline {
                     echo "Password: ${params.PASSWORD}" 
                 """
             }
+        }
     }
     post {
         success {
