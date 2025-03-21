@@ -8,7 +8,7 @@ pipeline {
         greeting= "hello jenkins"
     }
     options {
-        timeout(time: 1, unit: 'SECONDS') 
+        timeout(time: 10, unit: 'SECONDS') 
         disableConcurrentBuilds()
     }
     parameters {
@@ -40,7 +40,7 @@ pipeline {
                 sh"""
                     echo 'here i wrote the shell script'
                     echo $greeting
-                    // sleep 10
+                    #sleep 10
                 """
             }
         }
